@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:columnCount="8"
+    android:rowCount="6"
+    android:id="@+id/grid"
+    android:layout_height="match_parent">
+
+   <com.example.franck.candycrush_like.Circle 
+custom:my_column="0" 
+custom:my_line="0"  
+android:id="@+id/A0"  
+custom:my_color="red"  
+android:text="A0" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" />  
+
+<com.example.franck.candycrush_like.Circle 
+custom:my_column="1" 
+custom:my_line="0"  
+android:id="@+id/A1"  
+custom:my_color="green"  
+android:text="A1" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" />  
+
+<com.example.franck.candycrush_like.Circle 
+custom:my_column="2" 
+custom:my_line="0"  
+android:id="@+id/A2"  
+custom:my_color="green"  
+android:text="A2" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" />  
+
+<com.example.franck.candycrush_like.Circle 
+custom:my_column="3" 
+custom:my_line="0"  
+android:id="@+id/A3"  
+custom:my_color="orange"  
+android:text="A3" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" />  
+
+<com.example.franck.candycrush_like.Circle 
+custom:my_column="4" 
+custom:my_line="0"  
+android:id="@+id/A4"  
+custom:my_color="red"  
+android:text="A4" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" />  
+
+<com.example.franck.candycrush_like.Circle 
+custom:my_column="5" 
+custom:my_line="0"  
+android:id="@+id/A5"  
+custom:my_color="blue"  
+android:text="A5" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" />  
+
+<com.example.franck.candycrush_like.Circle 
+custom:my_column="6" 
+custom:my_line="0"  
+android:id="@+id/A6"  
+custom:my_color="green"  
+android:text="A6" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" />  
+
+<com.example.franck.candycrush_like.Circle 
+custom:my_column="7" 
+custom:my_line="0"  
+android:id="@+id/A7"  
+custom:my_color="green"  
+android:text="A7" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" />  
+
+<com.example.franck.candycrush_like.Circle 
+custom:my_column="0" 
+custom:my_line="1"  
+android:id="@+id/B0"  
+custom:my_color="orange"  
+android:text="B0" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" />  
+
+<com.example.franck.candycrush_like.Circle 
+custom:my_column="1" 
+custom:my_line="1"  
+android:id="@+id/B1"  
+custom:my_color="red"  
+android:text="B1" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" />  
+
+<com.example.franck.candycrush_like.Circle 
+custom:my_column="2" 
+custom:my_line="1"  
+android:id="@+id/B2"  
+custom:my_color="orange"  
+android:text="B2" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" />  
+
+<com.example.franck.candycrush_like.Circle 
+custom:my_column="3" 
+custom:my_line="1"  
+android:id="@+id/B3"  
+custom:my_color="red"  
+android:text="B3" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" />  
+
+<com.example.franck.candycrush_like.Circle 
+custom:my_column="4" 
+custom:my_line="1"  
+android:id="@+id/B4"  
+custom:my_color="blue"  
+android:text="B4" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" />  
+
+<com.example.franck.candycrush_like.Circle 
+custom:my_column="5" 
+custom:my_line="1"  
+android:id="@+id/B5"  
+custom:my_color="blue"  
+android:text="B5" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" />  
+
+<com.example.franck.candycrush_like.Circle 
+custom:my_column="6" 
+custom:my_line="1"  
+android:id="@+id/B6"  
+custom:my_color="purple"  
+android:text="B6" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" />  
+
+<com.example.franck.candycrush_like.Circle 
+custom:my_column="7" 
+custom:my_line="1"  
+android:id="@+id/B7"  
+custom:my_color="green"  
+android:text="B7" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" />  
+
+<com.example.franck.candycrush_like.Circle 
+custom:my_column="0" 
+custom:my_line="2"  
+android:id="@+id/C0"  
+custom:my_color="purple"  
+android:text="C0" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" />  
+
+<com.example.franck.candycrush_like.Circle 
+custom:my_column="1" 
+custom:my_line="2"  
+android:id="@+id/C1"  
+custom:my_color="blue"  
+android:text="C1" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" />  
+
+<com.example.franck.candycrush_like.Circle 
+custom:my_column="2" 
+custom:my_line="2"  
+android:id="@+id/C2"  
+custom:my_color="blue"  
+android:text="C2" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" />  
+
+<com.example.franck.candycrush_like.Circle 
+custom:my_column="3" 
+custom:my_line="2"  
+android:id="@+id/C3"  
+custom:my_color="orange"  
+android:text="C3" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" />  
+
+<com.example.franck.candycrush_like.Circle 
+custom:my_column="4" 
+custom:my_line="2"  
+android:id="@+id/C4"  
+custom:my_color="blue"  
+android:text="C4" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" />  
+
+<com.example.franck.candycrush_like.Circle 
+custom:my_column="5" 
+custom:my_line="2"  
+android:id="@+id/C5"  
+custom:my_color="green"  
+android:text="C5" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" />  
+
+<com.example.franck.candycrush_like.Circle 
+custom:my_column="6" 
+custom:my_line="2"  
+android:id="@+id/C6"  
+custom:my_color="purple"  
+android:text="C6" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" />  
+
+<com.example.franck.candycrush_like.Circle 
+custom:my_column="7" 
+custom:my_line="2"  
+android:id="@+id/C7"  
+custom:my_color="orange"  
+android:text="C7" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" />  
+
+<com.example.franck.candycrush_like.Circle 
+custom:my_column="0" 
+custom:my_line="3"  
+android:id="@+id/D0"  
+custom:my_color="red"  
+android:text="D0" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" />  
+
+<com.example.franck.candycrush_like.Circle 
+custom:my_column="1" 
+custom:my_line="3"  
+android:id="@+id/D1"  
+custom:my_color="yellow"  
+android:text="D1" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" />  
+
+<com.example.franck.candycrush_like.Circle 
+custom:my_column="2" 
+custom:my_line="3"  
+android:id="@+id/D2"  
+custom:my_color="purple"  
+android:text="D2" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" />  
+
+<com.example.franck.candycrush_like.Circle 
+custom:my_column="3" 
+custom:my_line="3"  
+android:id="@+id/D3"  
+custom:my_color="orange"  
+android:text="D3" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" />  
+
+<com.example.franck.candycrush_like.Circle 
+custom:my_column="4" 
+custom:my_line="3"  
+android:id="@+id/D4"  
+custom:my_color="yellow"  
+android:text="D4" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" />  
+
+<com.example.franck.candycrush_like.Circle 
+custom:my_column="5" 
+custom:my_line="3"  
+android:id="@+id/D5"  
+custom:my_color="purple"  
+android:text="D5" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" />  
+
+<com.example.franck.candycrush_like.Circle 
+custom:my_column="6" 
+custom:my_line="3"  
+android:id="@+id/D6"  
+custom:my_color="green"  
+android:text="D6" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" />  
+
+<com.example.franck.candycrush_like.Circle 
+custom:my_column="7" 
+custom:my_line="3"  
+android:id="@+id/D7"  
+custom:my_color="orange"  
+android:text="D7" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" />  
+
+<com.example.franck.candycrush_like.Circle 
+custom:my_column="0" 
+custom:my_line="4"  
+android:id="@+id/E0"  
+custom:my_color="orange"  
+android:text="E0" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" />  
+
+<com.example.franck.candycrush_like.Circle 
+custom:my_column="1" 
+custom:my_line="4"  
+android:id="@+id/E1"  
+custom:my_color="blue"  
+android:text="E1" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" />  
+
+<com.example.franck.candycrush_like.Circle 
+custom:my_column="2" 
+custom:my_line="4"  
+android:id="@+id/E2"  
+custom:my_color="red"  
+android:text="E2" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" />  
+
+<com.example.franck.candycrush_like.Circle 
+custom:my_column="3" 
+custom:my_line="4"  
+android:id="@+id/E3"  
+custom:my_color="yellow"  
+android:text="E3" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" />  
+
+<com.example.franck.candycrush_like.Circle 
+custom:my_column="4" 
+custom:my_line="4"  
+android:id="@+id/E4"  
+custom:my_color="green"  
+android:text="E4" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" />  
+
+<com.example.franck.candycrush_like.Circle 
+custom:my_column="5" 
+custom:my_line="4"  
+android:id="@+id/E5"  
+custom:my_color="purple"  
+android:text="E5" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" />  
+
+<com.example.franck.candycrush_like.Circle 
+custom:my_column="6" 
+custom:my_line="4"  
+android:id="@+id/E6"  
+custom:my_color="green"  
+android:text="E6" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" />  
+
+<com.example.franck.candycrush_like.Circle 
+custom:my_column="7" 
+custom:my_line="4"  
+android:id="@+id/E7"  
+custom:my_color="purple"  
+android:text="E7" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" />  
+
+<com.example.franck.candycrush_like.Circle 
+custom:my_column="0" 
+custom:my_line="5"  
+android:id="@+id/F0"  
+custom:my_color="red"  
+android:text="F0" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" />  
+
+<com.example.franck.candycrush_like.Circle 
+custom:my_column="1" 
+custom:my_line="5"  
+android:id="@+id/F1"  
+custom:my_color="yellow"  
+android:text="F1" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" />  
+
+<com.example.franck.candycrush_like.Circle 
+custom:my_column="2" 
+custom:my_line="5"  
+android:id="@+id/F2"  
+custom:my_color="yellow"  
+android:text="F2" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" />  
+
+<com.example.franck.candycrush_like.Circle 
+custom:my_column="3" 
+custom:my_line="5"  
+android:id="@+id/F3"  
+custom:my_color="blue"  
+android:text="F3" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" />  
+
+<com.example.franck.candycrush_like.Circle 
+custom:my_column="4" 
+custom:my_line="5"  
+android:id="@+id/F4"  
+custom:my_color="orange"  
+android:text="F4" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" />  
+
+<com.example.franck.candycrush_like.Circle 
+custom:my_column="5" 
+custom:my_line="5"  
+android:id="@+id/F5"  
+custom:my_color="yellow"  
+android:text="F5" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" />  
+
+<com.example.franck.candycrush_like.Circle 
+custom:my_column="6" 
+custom:my_line="5"  
+android:id="@+id/F6"  
+custom:my_color="blue"  
+android:text="F6" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" />  
+
+<com.example.franck.candycrush_like.Circle 
+custom:my_column="7" 
+custom:my_line="5"  
+android:id="@+id/F7"  
+custom:my_color="blue"  
+android:text="F7" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content" />  
+
+
+
+
+</GridLayout>

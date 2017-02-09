@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:columnCount="8"
+    android:rowCount="5"
+    android:background="@color/black_overlay"
+    android:id="@+id/grid"
+    android:layout_height="wrap_content">
+
+    <com.example.franck.candycrush_like.Circle
+        custom:my_column="0"
+        custom:my_line="0"
+        android:id="@+id/A0"
+        android:text="A0"
+        custom:my_color="yellow"
+        android:src="@drawable/round_button"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+
+    <com.example.franck.candycrush_like.Circle
+        custom:my_column="1"
+        custom:my_line="0"
+        android:id="@+id/A1"
+        custom:my_color="green"
+        android:background="@drawable/round_button"
+        android:text="A1"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+
+    <com.example.franck.candycrush_like.Circle
+        custom:my_column="2"
+        custom:my_line="0"
+        android:id="@+id/A2"
+        custom:my_color="yellow"
+        android:background="@drawable/round_button"
+        android:text="A2"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+
+    <com.example.franck.candycrush_like.Circle
+        custom:my_column="3"
+        custom:my_line="0"
+        android:id="@+id/A3"
+        android:background="@drawable/round_button"
+        custom:my_color="green"
+        android:text="A3"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+
+    <com.example.franck.candycrush_like.Circle
+        custom:my_column="4"
+        custom:my_line="0"
+        android:id="@+id/A4"
+        custom:my_color="yellow"
+        android:text="A4"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+
+    <com.example.franck.candycrush_like.Circle
+        custom:my_column="5"
+        custom:my_line="0"
+        android:id="@+id/A5"
+        custom:my_color="green"
+        android:text="A5"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+
+    <com.example.franck.candycrush_like.Circle
+        custom:my_column="6"
+        custom:my_line="0"
+        android:id="@+id/A6"
+        custom:my_color="purple"
+        android:text="A6"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+
+    <com.example.franck.candycrush_like.Circle
+        custom:my_column="7"
+        custom:my_line="0"
+        android:id="@+id/A7"
+        custom:my_color="purple"
+        android:text="A7"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+
+    <com.example.franck.candycrush_like.Circle
+        custom:my_column="0"
+        custom:my_line="1"
+        android:id="@+id/B0"
+        custom:my_color="green"
+        android:text="B0"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+
+    <com.example.franck.candycrush_like.Circle
+        custom:my_column="1"
+        custom:my_line="1"
+        android:id="@+id/B1"
+        custom:my_color="purple"
+        android:text="B1"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+
+    <com.example.franck.candycrush_like.Circle
+        custom:my_column="2"
+        custom:my_line="1"
+        android:id="@+id/B2"
+        custom:my_color="orange"
+        android:text="B2"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+
+    <com.example.franck.candycrush_like.Circle
+        custom:my_column="3"
+        custom:my_line="1"
+        android:id="@+id/B3"
+        custom:my_color="red"
+        android:text="B3"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+
+    <com.example.franck.candycrush_like.Circle
+        custom:my_column="4"
+        custom:my_line="1"
+        android:id="@+id/B4"
+        custom:my_color="blue"
+        android:text="B4"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+
+    <com.example.franck.candycrush_like.Circle
+        custom:my_column="5"
+        custom:my_line="1"
+        android:id="@+id/B5"
+        custom:my_color="blue"
+        android:text="B5"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+
+    <com.example.franck.candycrush_like.Circle
+        custom:my_column="6"
+        custom:my_line="1"
+        android:id="@+id/B6"
+        custom:my_color="orange"
+        android:text="B6"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+
+    <com.example.franck.candycrush_like.Circle
+        custom:my_column="7"
+        custom:my_line="1"
+        android:id="@+id/B7"
+        custom:my_color="blue"
+        android:text="B7"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+
+    <com.example.franck.candycrush_like.Circle
+        custom:my_column="0"
+        custom:my_line="2"
+        android:id="@+id/C0"
+        custom:my_color="blue"
+        android:text="C0"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+
+    <com.example.franck.candycrush_like.Circle
+        custom:my_column="1"
+        custom:my_line="2"
+        android:id="@+id/C1"
+        custom:my_color="red"
+        android:text="C1"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+
+    <com.example.franck.candycrush_like.Circle
+        custom:my_column="2"
+        custom:my_line="2"
+        android:id="@+id/C2"
+        custom:my_color="orange"
+        android:text="C2"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+
+    <com.example.franck.candycrush_like.Circle
+        custom:my_column="3"
+        custom:my_line="2"
+        android:id="@+id/C3"
+        custom:my_color="red"
+        android:text="C3"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+
+    <com.example.franck.candycrush_like.Circle
+        custom:my_column="4"
+        custom:my_line="2"
+        android:id="@+id/C4"
+        custom:my_color="blue"
+        android:text="C4"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+
+    <com.example.franck.candycrush_like.Circle
+        custom:my_column="5"
+        custom:my_line="2"
+        android:id="@+id/C5"
+        custom:my_color="green"
+        android:text="C5"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+
+    <com.example.franck.candycrush_like.Circle
+        custom:my_column="6"
+        custom:my_line="2"
+        android:id="@+id/C6"
+        custom:my_color="orange"
+        android:text="C6"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+
+    <com.example.franck.candycrush_like.Circle
+        custom:my_column="7"
+        custom:my_line="2"
+        android:id="@+id/C7"
+        custom:my_color="red"
+        android:text="C7"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+
+    <com.example.franck.candycrush_like.Circle
+        custom:my_column="0"
+        custom:my_line="3"
+        android:id="@+id/D0"
+        custom:my_color="purple"
+        android:text="D0"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+
+    <com.example.franck.candycrush_like.Circle
+        custom:my_column="1"
+        custom:my_line="3"
+        android:id="@+id/D1"
+        custom:my_color="orange"
+        android:text="D1"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+
+    <com.example.franck.candycrush_like.Circle
+        custom:my_column="2"
+        custom:my_line="3"
+        android:id="@+id/D2"
+        custom:my_color="purple"
+        android:text="D2"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+
+    <com.example.franck.candycrush_like.Circle
+        custom:my_column="3"
+        custom:my_line="3"
+        android:id="@+id/D3"
+        custom:my_color="blue"
+        android:text="D3"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+
+    <com.example.franck.candycrush_like.Circle
+        custom:my_column="4"
+        custom:my_line="3"
+        android:id="@+id/D4"
+        custom:my_color="orange"
+        android:text="D4"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+
+    <com.example.franck.candycrush_like.Circle
+        custom:my_column="5"
+        custom:my_line="3"
+        android:id="@+id/D5"
+        custom:my_color="green"
+        android:text="D5"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+
+    <com.example.franck.candycrush_like.Circle
+        custom:my_column="6"
+        custom:my_line="3"
+        android:id="@+id/D6"
+        custom:my_color="green"
+        android:text="D6"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+
+    <com.example.franck.candycrush_like.Circle
+        custom:my_column="7"
+        custom:my_line="3"
+        android:id="@+id/D7"
+        custom:my_color="orange"
+        android:text="D7"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+
+    <com.example.franck.candycrush_like.Circle
+        custom:my_column="0"
+        custom:my_line="4"
+        android:id="@+id/E0"
+        custom:my_color="yellow"
+        android:text="E0"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+
+    <com.example.franck.candycrush_like.Circle
+        custom:my_column="1"
+        custom:my_line="4"
+        android:id="@+id/E1"
+        custom:my_color="red"
+        android:text="E1"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+
+    <com.example.franck.candycrush_like.Circle
+        custom:my_column="2"
+        custom:my_line="4"
+        android:id="@+id/E2"
+        custom:my_color="yellow"
+        android:text="E2"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+
+    <com.example.franck.candycrush_like.Circle
+        custom:my_column="3"
+        custom:my_line="4"
+        android:id="@+id/E3"
+        custom:my_color="orange"
+        android:text="E3"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+
+    <com.example.franck.candycrush_like.Circle
+        custom:my_column="4"
+        custom:my_line="4"
+        android:id="@+id/E4"
+        custom:my_color="blue"
+        android:text="E4"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+
+    <com.example.franck.candycrush_like.Circle
+        custom:my_column="5"
+        custom:my_line="4"
+        android:id="@+id/E5"
+        custom:my_color="red"
+        android:text="E5"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+
+    <com.example.franck.candycrush_like.Circle
+        custom:my_column="6"
+        custom:my_line="4"
+        android:id="@+id/E6"
+        custom:my_color="green"
+        android:text="E6"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+
+    <com.example.franck.candycrush_like.Circle
+        custom:my_column="7"
+        custom:my_line="4"
+        android:id="@+id/E7"
+        custom:my_color="purple"
+        android:text="E7"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+
+
+</GridLayout>
