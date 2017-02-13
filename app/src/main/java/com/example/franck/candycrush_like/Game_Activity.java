@@ -8,6 +8,7 @@ import android.view.DragEvent;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.GridLayout;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
@@ -17,7 +18,7 @@ import android.widget.Toast;
  */
 public class Game_Activity extends AppCompatActivity {
 
-    public Game_Controller game_c = null;
+    public Level_Controller game_c = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +29,7 @@ public class Game_Activity extends AppCompatActivity {
 
     protected void initialize(){
         setContentView(R.layout.activity_game_);
-        RelativeLayout item = (RelativeLayout)findViewById(R.id.fullscreen_content);
+        LinearLayout item = (LinearLayout)findViewById(R.id.fullscreen_content);
         View childV = null;
         int level = getIntent().getIntExtra("com.example.franck.candycrush_like.level",1);
         Log.w("Level nb",""+level);
@@ -37,31 +38,31 @@ public class Game_Activity extends AppCompatActivity {
             case 1:
                 childV = getLayoutInflater().inflate(R.layout.lvl1, null);
                 level_obj = new Game_Level(level, 8, 5, 800, 6);
-                game_c = new Game_Controller(level_obj);
+                game_c = new Level_Controller(level_obj);
                 break;
             case 2:
                 childV = getLayoutInflater().inflate(R.layout.lvl2, null);
                 level_obj = new Game_Level(level, 8, 6, 1200, 10);
-                game_c = new Game_Controller(level_obj);
+                game_c = new Level_Controller(level_obj);
                 break;
             case 3:
                 childV = getLayoutInflater().inflate(R.layout.lvl3, null);
                 level_obj = new Game_Level(level, 7, 7, 1400, 10);
-                game_c = new Game_Controller(level_obj);
+                game_c = new Level_Controller(level_obj);
                 break;
             case 4:
                 childV = getLayoutInflater().inflate(R.layout.lvl4, null);
                 level_obj = new Game_Level(level, 7, 8, 1800, 10);
-                game_c = new Game_Controller(level_obj);
+                game_c = new Level_Controller(level_obj);
                 break;
             default:
                 childV = getLayoutInflater().inflate(R.layout.lvl1, null);
                 level_obj = new Game_Level(1, 8 , 5, 800, 6);
-                game_c = new Game_Controller(level_obj);
+                game_c = new Level_Controller(level_obj);
         }
 
         item.addView(childV);
-        childV.setLayoutParams(new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.MATCH_PARENT));
+        //childV.setLayoutParams(new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT));
         GridLayout mlayout = (GridLayout) findViewById(R.id.grid);
         int count = mlayout.getChildCount();
         for(int i = 0 ; i <count ; i++) {
@@ -71,6 +72,11 @@ public class Game_Activity extends AppCompatActivity {
             child.setLayoutPlacement();
             game_c.config[child.getPlacementY()][child.getPlacementX()] = child;
         }
+        mlayout.setLayoutParams(new GridLayout.LayoutParams(
+
+        ));
+        mlayout.invalidate();
+        childV.invalidate();
     }
 
     public class MyDragListener implements View.OnDragListener {

@@ -14,7 +14,7 @@ import static java.lang.Math.min;
  * Created by Franck on 06/02/2017.
  */
 
-public  class Game_Controller {
+public  class Level_Controller {
     static public Random rand = new Random();
     static public int nb_colors = 6;
     public Game_Level level;
@@ -256,7 +256,7 @@ public  class Game_Controller {
             return null;
     }
 
-    public Game_Controller( Game_Level l){
+    public Level_Controller( Game_Level l){
         level = l;
         score = 0;
         nbcoupesjoues = 0;

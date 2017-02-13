@@ -3,11 +3,15 @@
     <item android:state_pressed="false">
         <shape android:shape="oval">
             <solid android:color="@color/green"/>
+            <size android:height="@dimen/me_size"
+                android:width="@dimen/me_size"/>
         </shape>
     </item>
     <item android:state_pressed="true">
         <shape android:shape="oval">
             <solid android:color="@color/green"/>
+            <size android:height="@dimen/me_size"
+                android:width="@dimen/me_size"/>
         </shape>
     </item>
 </selector>

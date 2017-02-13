@@ -13,4 +13,6 @@
     <string name="playlvl2">Niveau 2</string>
     <string name="playlvl3">Niveau 3</string>
     <string name="playlvl4">Niveau 4</string>
+    <string name="score_t">Score</string>
+    <string name="level_t">Niveau </string>
 </resources>

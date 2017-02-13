@@ -9,12 +9,13 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 /**
  * Created by Franck on 07/02/2017.
  */
 
-public class Circle extends Button {
+public class Circle extends TextView {
 
     private int x;
     private int y;
