@@ -1,5 +1,6 @@
 package com.example.franck.candycrush_like;
 
+import android.os.Handler;
 import android.util.Log;
 import android.util.Pair;
 
@@ -18,14 +19,17 @@ public  class Level_Controller {
     static public Random rand = new Random();
     static public int nb_colors = 6;
     public Game_Level level;
-    public int nbcoupesjoues;
+    public int nbcoupesjoues = 0;
     static public int greater_Level;
+    public boolean advanced =false ;
     public int score;
     public Circle [][] config;
     public ArrayList<Circle> circles_to_remove  = new ArrayList<>();
     public ArrayList <Circle> moved_circles = new ArrayList<>() ;
+    public int multiplicateur = 1;
+    public Game_Activity  activity = null;
 
-    public boolean correct_move(Circle one, Circle two){
+    public boolean correct_move(final Circle one, Circle two){
         boolean result = false;
         if ( checksidetoside(one,two)){
             one.setTarget(two);
@@ -37,7 +41,10 @@ public  class Level_Controller {
                 moved_circles.add(one);
                 moved_circles.add(two);
                 result = exchange(one,two);
-                oneMove();
+                if(advanced)
+                    activity.enableBtn(true);
+                else
+                    oneMove();
             }
         }else {
             cancel_move(one);
@@ -155,16 +162,41 @@ public  class Level_Controller {
         return false;
     }
 
+
+    public int nextStep(){
+        int score_tempo = refresh_grid() * multiplicateur;
+        addScore(score_tempo);
+        multiplicateur++;
+        return  score_tempo;
+    }
+
+    public void advanced_click(){
+        if(circles_to_remove.size()>0)
+            removeCircles();
+        int score_tempo = refresh_grid() * multiplicateur;
+        addScore(score_tempo);
+        if(score_tempo == 0){
+            nbcoupesjoues++;
+            activity.setCoups(nbcoupesjoues);
+            activity.enableBtn(false);
+            multiplicateur = 1;
+        }else{
+
+        }
+    }
+
+
     public  boolean oneMove(){
-        int multiplicateur = 1;
+        multiplicateur = 1;
         int score_tempo ;
         do{
-            score_tempo = refresh_grid() * multiplicateur;
-            multiplicateur ++;
-            addScore(score_tempo);
+            score_tempo = nextStep();
+            removeCircles();
+
         }
         while (score_tempo>0);
         nbcoupesjoues++;
+        activity.setCoups(nbcoupesjoues);
         return true;
     }
 
@@ -204,10 +236,19 @@ public  class Level_Controller {
         }
         Log.w("Count", circles_to_remove.size()+" to remove");
         moved_circles.clear();
-        removeCircles();
+
+        blackCircles();
+
+       // removeCircle() ;
 
         //moved_circles.addAll(circles_to_remove);
         return (temp_score);
+    }
+
+    public  void blackCircles(){
+        for (Circle c : circles_to_remove) {
+            c.getBackground().setAlpha(120);
+        }
     }
 
     public  void removeCircles(){
@@ -256,7 +297,8 @@ public  class Level_Controller {
             return null;
     }
 
-    public Level_Controller( Game_Level l){
+    public Level_Controller( Game_Activity act , Game_Level l){
+        activity = act;
         level = l;
         score = 0;
         nbcoupesjoues = 0;
@@ -265,12 +307,19 @@ public  class Level_Controller {
 
     public void addScore(int ajout){
         score += ajout;
-        if(level.atteinte<score )
+        if(level.atteinte<=score && level.nb_coups >= nbcoupesjoues )
             greater_Level = max (level.num, greater_Level);
+        activity.setScore(score);
     }
-
     public int getScore(){
         return score;
     }
 
+    public int getCoupsJoues(){
+        return nbcoupesjoues;
+    }
+
+    public void setAdvanced( boolean adv){
+        advanced = adv;
+    }
 }

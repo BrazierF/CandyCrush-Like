@@ -15,6 +15,7 @@ http://stackoverflow.com/questions/2091465/how-do-i-pass-data-between-activities
 https://developer.android.com/reference/android/content/Intent.html
 http://stackoverflow.com/questions/9884202/custom-circle-button
 http://stackoverflow.com/questions/20985302/rounded-corners-on-layout
+https://developer.android.com/guide/topics/ui/controls/togglebutton.html#ClickListener
 
 Déroulement habituel d’une partie :
 A l’initialisation d’une partie, la grille de jeu est remplie des différents items du jeu. Le joueur peut

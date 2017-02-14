@@ -10,6 +10,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class Start_Activity extends AppCompatActivity {
 
@@ -53,9 +54,13 @@ public class Start_Activity extends AppCompatActivity {
     }
 
     private void start(int i) {
-        Intent intent = new Intent(this,Game_Activity.class);
-        intent.putExtra("com.example.franck.candycrush_like.level",i);
-        startActivity(intent);
+        if(i <= Level_Controller.greater_Level + 1) {
+            Intent intent = new Intent(this, Game_Activity.class);
+            intent.putExtra("com.example.franck.candycrush_like.level", i);
+            startActivity(intent);
+        }else{
+            Toast.makeText(this,R.string.blocked_level,Toast.LENGTH_SHORT).show();
+        }
     }
 
 

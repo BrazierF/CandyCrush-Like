@@ -6,7 +6,6 @@
     android:layout_width="match_parent"
     android:columnCount="8"
     android:rowCount="5"
-    android:background="@color/black_overlay"
     android:id="@+id/grid"
     android:layout_height="match_parent">
 

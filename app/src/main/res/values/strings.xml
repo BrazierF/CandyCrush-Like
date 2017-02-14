@@ -13,6 +13,34 @@
     <string name="playlvl2">Niveau 2</string>
     <string name="playlvl3">Niveau 3</string>
     <string name="playlvl4">Niveau 4</string>
-    <string name="score_t">Score</string>
-    <string name="level_t">Niveau </string>
+    <string name="score_t">Score : </string>
+    <string name="level_t">Niveau : </string>
+    <string name="remaining_t">A effectuer : </string>
+    <string name="coups_t">Coups restants : </string>
+    <string name="blocked_level"> Niveau bloqué </string>
+    <string name="rules_content_title1">
+    Déroulement habituel d’une partie : </string>
+    <string name="rules_content_1">
+ L’objectif de chaque coup est d’aligner au
+moins 3 éléments similaires, que ce soit verticalement ou horizontalement. Si plus de 3 éléments
+identiques sont alignés à la suite du coup, les éléments supplémentaires disparaissent également
+(dans les versions plus évoluées, ils génèrent des items rapportant plus de points ou permettant des
+bonus). Les éléments qui étaient au-dessus des éléments qui ont disparu descendent alors dans la
+grille, et sont remplacés par des éléments choisis aléatoirement. Il n’est pas possible d’échanger la
+place de deux éléments si l’échange ne permet pas de former un groupe de 3 minimum. </string>
+    <string name="rules_content_points_t">Les points :</string>
+    <string name="rules_content_points">
+- Un groupe de 3 : + 100 points \n
+- Un groupe de 4 : + 200 points \n
+- Un groupe de 5 : + 300 points \n
+Si deux groupes (ou plus) sont supprimés en même temps, le score rapporté par le coup est
+l’addition des scores rapportés par chacun des groupes (exemple : suppression de 2 groupes de 3 : +
+200 points). Lorsque des combos sont réalisés (après la disparition d’un groupe, un nouveau groupe
+est formé et peut être supprimé sans action du joueur), le score du nouveau groupe qui disparait est
+multiplié par 2. Si le combo se poursuit (par exemple la disparition de ce groupe permet la
+formation d’un nouveau groupe), le score est multiplié par 3. Et ainsi de suite jusqu’à ce que le
+combo soit brisé, c’est-à-dire jusqu’à ce que le joueur ait à nouveau effectué une action.</string>
+        <string name="rules_content_end">
+Lorsque le nombre de coups restants atteint 0, le score final du niveau est affiché, et si le score est supérieur à l’objectif du niveau, il est possible de passer au niveau suivant.
+</string>
 </resources>
