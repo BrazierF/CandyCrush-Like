@@ -1,14 +1,11 @@
 <resources>
     <string name="app_name">CandyCrush-Like</string>
-
-    <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="start">Demarrer</string>
     <string name="exit">Quitter</string>
     <string name="rules">Regles</string>
-    <string name="title_activity_main"> Jeu ! </string>
-    <string name="title_activity_rules_">Rules_Activity</string>
-    <string name="title_activity_start_">Start_Activity</string>
+    <string name="title_activity_game"> Jeu ! </string>
+    <string name="title_activity_rules_">Règles du Jeu !</string>
+    <string name="title_activity_start_">Choix du Niveau</string>
     <string name="playlvl1">Niveau 1</string>
     <string name="playlvl2">Niveau 2</string>
     <string name="playlvl3">Niveau 3</string>
