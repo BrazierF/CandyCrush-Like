@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+/** Activité pour le choix du niveau*/
 public class Start_Activity extends AppCompatActivity {
 
     @Override
@@ -22,6 +23,8 @@ public class Start_Activity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+
+        // Ajouter un listener pour chaque bouton
         Button lvl1 = (Button) findViewById(R.id.playlvl1);
         lvl1. setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,6 +57,7 @@ public class Start_Activity extends AppCompatActivity {
     }
 
     private void start(int i) {
+        // Vérfier que le niveau est débloqué
         if(i <= Level_Controller.greater_Level + 1) {
             Intent intent = new Intent(this, Game_Activity.class);
             intent.putExtra("com.example.franck.candycrush_like.level", i);

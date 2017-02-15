@@ -11,35 +11,64 @@ import static java.lang.Math.abs;
 import static java.lang.Math.max;
 import static java.lang.Math.min;
 
-/**
- * Created by Franck on 06/02/2017.
- */
 
+/** Contrôleur du jeu */
 public  class Level_Controller {
+    /** une instance de Random pour la génération de nouveaux éléments en haut de la grille */
     static public Random rand = new Random();
+
+    /** Nombre de couleurs (commune à toutes)  dans la grille */
     static public int nb_colors = 6;
+
+    /** Niveau du jeu */
     public Game_Level level;
+
+    /** Nombre de coups joués */
     public int nbcoupesjoues = 0;
+
+    /** Meilleur niveau (int) débloqué */
     static public int greater_Level;
+
+    /** Etat du togglebutton  */
     public boolean advanced =false ;
+
+    /** Score obtenu */
     public int score;
+
+    /** Grille des éléments */
     public Circle [][] config;
+
+    /** Elements alignés à enlever */
     public ArrayList<Circle> circles_to_remove  = new ArrayList<>();
+
+    /** Elements qui ont changé de ma place */
     public ArrayList <Circle> moved_circles = new ArrayList<>() ;
+
+    /** Multiplicateur de score */
     public int multiplicateur = 1;
+
+    /** Activité lancant le jeu */
     public Game_Activity  activity = null;
 
+    /** Echanger deux éléments */
     public boolean correct_move(final Circle one, Circle two){
         boolean result = false;
+        // Verifier si c'est deux éléments sont bien adjacents
         if ( checksidetoside(one,two)){
+            //Mettre comme cible à un élément l'autre élément
             one.setTarget(two);
             two.setTarget(one);
+            //Changer la grille en fonction de ces déplacements
             execute_move(one);
             execute_move(two);
             Log.w("Move", "new Move" );
+
+            //Verifier si ce déplacement crée des alignements
             if(check3aligned(one )|| check3aligned(two)) {
+                // Ajouter les éléments dans liste des éléments déplacés
                 moved_circles.add(one);
                 moved_circles.add(two);
+                // Echanger effectivement les éléments (i.e. visible à l'écran)
                 result = exchange(one,two);
                 if(advanced)
                     activity.enableBtn(true);
@@ -47,6 +76,7 @@ public  class Level_Controller {
                     oneMove();
             }
         }else {
+            //Annuler le changement de la grille
             cancel_move(one);
             cancel_move(two);
         }
@@ -55,20 +85,28 @@ public  class Level_Controller {
         return result;
     }
 
+
+    /**  Verifier si c'est deux éléments sont bien adjacents */
     public static boolean checksidetoside(Circle one,Circle two){
         return ( abs(one.getPlacementX()-two.getPlacementX()) + abs(one.getPlacementY()-two.getPlacementY()) <2 );
     }
 
 
+    /** Annuler le déplacement */
     public boolean cancel_move(Circle one){
         config[one.getPlacementY()][one.getPlacementX()] = one;
+        // Remettre comme cible l'élément
         one.setTarget(one);
         return false;
     }
+
+    /**  Verifier si l'élément fait partie d'un alignement */
     public boolean check3aligned(Circle one){
         return check3alignedH(one) || check3alignedV(one);
     }
 
+
+    /** Echanger deux éléments et l'afficher*/
     public static boolean exchange(Circle one,Circle two){
         int tempo = one.getPlacementY();
         one.setPlacementY(two.getPlacementY());
@@ -82,7 +120,7 @@ public  class Level_Controller {
     }
 
 
-
+    /**  Verifier si l'élément fait partie d'un alignement vertical */
     public  boolean check3alignedV (Circle one){
         int row = one.getX_t();
         int column = one.getY_t();
@@ -106,6 +144,7 @@ public  class Level_Controller {
         return aligned;
     }
 
+    /**  Verifier si l'élément fait partie d'un alignement horizontal */
     public boolean check3alignedH (Circle one){
         int row = one.getX_t();
         int column = one.getY_t();
@@ -131,6 +170,7 @@ public  class Level_Controller {
         return aligned;
     }
 
+    /** Executer le deplacement dans config*/
     public boolean execute_move(Circle one){
         config[one.getY_t()][one.getX_t()] = one;
         return true;
@@ -140,6 +180,7 @@ public  class Level_Controller {
         Log.w("indice ", one.getCoordinates()+" -> " + one.getTargetCoordinates() + "    "+ one.getColor_s() );
     }
 
+    /** Faire tomber les éléments de la colomne au dessus de l'élément*/
     public boolean column_fall(Circle c){
        // Circle c = config[column][index];
         int index = c.getPlacementX();
@@ -150,12 +191,15 @@ public  class Level_Controller {
             config[column][i].setPlacementX(i);
             config[column][i].setTarget(config[column][i]);
             config[column][i].setLayoutPlacement();
+            // Ajouter ces éléments dans la liste des éléments déplacés
             moved_circles.add(config[column][i]);
             print_move(config[column][i]);
         }
         config[column][0] = c ;
         c.setPlacementX(0);
+        // Random couleur pour l'élément en haut de la colomne
         c.setC(random());
+        // Ajouter ces éléments dans la liste des éléments déplacés
         moved_circles.add(c);
         Log.w("color", c.getColor_s());
         c.setLayoutPlacement();
@@ -185,7 +229,7 @@ public  class Level_Controller {
         }
     }
 
-
+    /** Boucle tant qu'il y a des alignements  */
     public  boolean oneMove(){
         multiplicateur = 1;
         int score_tempo ;
@@ -200,6 +244,7 @@ public  class Level_Controller {
         return true;
     }
 
+    /** Calculer les alignements et leur score */
     public int  refresh_grid(){
         circles_to_remove.clear();
         int temp_score  = 0;
@@ -251,12 +296,14 @@ public  class Level_Controller {
         }
     }
 
+    /** Enlever les éléments alignéq*/
     public  void removeCircles(){
         for (Circle c : circles_to_remove) {
             column_fall(c);
         }
     }
 
+    /** Ajouter un élément dans la liste à enlever */
     public  boolean addToRemove(Circle c){
         if(!circles_to_remove.contains(c)) {
             circles_to_remove.add(c);
@@ -297,6 +344,7 @@ public  class Level_Controller {
             return null;
     }
 
+    /** Constructeur */
     public Level_Controller( Game_Activity act , Game_Level l){
         activity = act;
         level = l;
@@ -305,16 +353,23 @@ public  class Level_Controller {
         config = new Circle[l.nb_columns][l.nb_lines];
     }
 
+
+    /** Ajouter le score d'un mouvement */
     public void addScore(int ajout){
         score += ajout;
+        // Verifie si on dépasse l'objectif
         if(level.atteinte<=score && level.nb_coups >= nbcoupesjoues )
             greater_Level = max (level.num, greater_Level);
+        //Afficher le score
         activity.setScore(score);
     }
+
+    /** Accesseur score de la partie */
     public int getScore(){
         return score;
     }
 
+    /** Accesseur nombre de coups joues dans la partie */
     public int getCoupsJoues(){
         return nbcoupesjoues;
     }

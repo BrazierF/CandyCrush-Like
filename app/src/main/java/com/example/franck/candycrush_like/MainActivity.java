@@ -9,6 +9,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 
+
+/** Activité principale*/
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -19,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
 
+        // Ajouter les listeners pour chaque bouton
         Button start = (Button) findViewById(R.id.start_button);
         start.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -5,10 +5,8 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
 
-/**
- * Created by Franck on 06/02/2017.
- */
 
+/** Notre propre listener pour l'élément*/
 public class MyTouchListener implements OnTouchListener {
 
     @Override
