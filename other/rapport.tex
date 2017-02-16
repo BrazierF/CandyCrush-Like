@@ -1,0 +1,139 @@
+   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% University Assignment Title Page 
+% LaTeX Template
+% Version 1.0 (27/12/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% WikiBooks (http://en.wikibooks.org/wiki/LaTeX/Title_Creation)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+% 
+% Instructions for using this template:
+% This title page is capable of being compiled as is. This is not useful for 
+% including it in another document. To do this, you have two options: 
+%
+% 1) Copy/paste everything between \begin{document} and \end{document} 
+% starting at \begin{titlepage} and paste this into another LaTeX file where you 
+% want your title page.
+% OR
+% 2) Remove everything outside the \begin{titlepage} and \end{titlepage} and 
+% move this file to the same directory as the LaTeX file you wish to add it to. 
+% Then add \input{./title_page_1.tex} to your LaTeX file where you want your
+% title page.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\title{Title page with logo}
+%----------------------------------------------------------------------------------------
+%   PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[12pt]{article}
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+
+\begin{document}
+
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+
+\center % Center everything on the page
+ 
+%----------------------------------------------------------------------------------------
+%   HEADING SECTIONS
+%----------------------------------------------------------------------------------------
+
+\textsc{\LARGE  \'{E}cole Polytechnique de Montr\'{e}al, Qu\'{e}bec, Canada}\\[1.5cm] % Name of your university/college
+\textsc{\Large INF8405 - Informatique mobile
+}\\[0.5cm] % Major heading such as course name
+\textsc{\large Travail Pratique N.1}\\[0.5cm] % Minor heading such as course title
+
+%----------------------------------------------------------------------------------------
+%   TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\HRule \\[0.4cm]
+{ \huge \bfseries Application de jeu pour Android}\\[0.4cm] % Title of your document
+\HRule \\[1.5cm]
+ 
+%----------------------------------------------------------------------------------------
+%   AUTHOR SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}{0.5\textwidth}
+\begin{flushleft} \large
+\emph{Auteurs:}\\
+Franck \textsc{Brazier}  1815797\\ % Your name 
+Abbas  \textsc{Omidali} 1759476\\ % Your name 
+Farshad \textsc{Tir} 1769679 \\ % Your name 
+\end{flushleft}
+\end{minipage}
+~
+\begin{minipage}{0.4\textwidth}
+\begin{flushright} \large
+\emph{Soumis à :} \\
+Fabien  \textsc{BERQUEZ} % Supervisor's Name
+\end{flushright}
+\end{minipage}\\[2cm]
+
+% If you don't want a supervisor, uncomment the two lines below and remove the section above
+%\Large \emph{Author:}\\
+%John \textsc{Smith}\\[3cm] % Your name
+
+
+%----------------------------------------------------------------------------------------
+%   LOGO SECTION
+%----------------------------------------------------------------------------------------
+
+\includegraphics[height=3.8cm]{poly.jpg} % Include a department/university logo - this will require the graphicx package
+ 
+
+%----------------------------------------------------------------------------------------
+%   DATE SECTION
+%----------------------------------------------------------------------------------------
+
+{\large \today}\\[2cm] % Date, change the \today to a set date if you want to be precise
+
+%----------------------------------------------------------------------------------------
+
+\vfill % Fill the rest of the page with whitespace
+
+\end{titlepage}
+
+\section{Introduction}
+
+\section{Présentation technique}7
+\subsection{Activités}
+Notre applications possèdent deux types d'activités, des activités où ne sont présent que des boutons pour pouvoir accéder à l'activité de jeu et les activités de jeu et de règles qui sont les activités finales. Ces activités intermédiaires sont :
+\begin{itemize}
+\item Main Activity \\
+Cette activité est l'activité première de l'application et permet d'accéder à la page de choix des niveaux,  aux règles du jeu ou  le quitter
+\item StartActivity \\
+Cette activité permet d'effectuer le choix du niveau auquel l'utilisateur veut jouer, l'utilisateur est bloqué si le niveau précédent n'est pas réussi
+\end{itemize}
+Les activités finales sont : \\
+\begin{itemize}
+\item RulesActivity \\
+Cette activité comprend uniquement les règles du jeu (compris dans des \textit{TextViews}) sans autre intéraction avec l'utilisateur
+\item GameActivity \\
+L'activité la plus importante de l'application qui est la \textit{vue} du jeu, elle récupère la bonne  grille depuis un fichier xml grâce à un extra dans la création de l'activité et initialise le contrôleur de jeu
+\end{itemize}
+Chaque classe hérite de la classe BaseActivity qui implémente les fonctions communes à chaque activité, par exemple celles appelées lorsque l'on appuie sur un bouton de la bar d'application située en haut de l'écran.
+
+
+\subsection{Classes}
+Notre application possède 5 classes, essentiel pour le fonctionnement du jeu. il y a deux classes qui implémentent des Listeners. (\textit{OnTouch} et \textit{OnDrag}). L'\textit{OnTouchListener} permet de faire disparaître l'élement lorsque l'on appuie dessus et qu'on comment à le déplacer.   L'\textit{OnDragListener} a surtout pour but de détecter les éléments que l'utilisateur veut échanger et d'\textit{envoyer} cette requête au contrôleur.
+ 
+
+\section{Difficultés particulières}
+
+\section{Critiques et suggestions}
+
+\end{document}

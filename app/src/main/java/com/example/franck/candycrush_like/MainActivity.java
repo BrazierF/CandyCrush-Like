@@ -11,7 +11,7 @@ import android.widget.Button;
 
 
 /** Activité principale*/
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +20,10 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        if( getIntent().getBooleanExtra("Quit", false)){
+            finish();
+            return;
+        }
 
         // Ajouter les listeners pour chaque bouton
         Button start = (Button) findViewById(R.id.start_button);

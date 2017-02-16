@@ -16,6 +16,10 @@ https://developer.android.com/reference/android/content/Intent.html
 http://stackoverflow.com/questions/9884202/custom-circle-button
 http://stackoverflow.com/questions/20985302/rounded-corners-on-layout
 https://developer.android.com/guide/topics/ui/controls/togglebutton.html#ClickListener
+https://developer.android.com/training/appbar/actions.html
+-https://developer.android.com/guide/topics/ui/dialogs.html
+-http://stackoverflow.com/questions/26778701/how-to-add-buttons-like-refresh-and-search-in-toolbar-in-android
+-http://stackoverflow.com/questions/3226495/how-to-exit-from-the-application-and-show-the-home-screen
 
 Déroulement habituel d’une partie :
 A l’initialisation d’une partie, la grille de jeu est remplie des différents items du jeu. Le joueur peut

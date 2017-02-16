@@ -360,6 +360,8 @@ public  class Level_Controller {
         // Verifie si on dépasse l'objectif
         if(level.atteinte<=score && level.nb_coups >= nbcoupesjoues )
             greater_Level = max (level.num, greater_Level);
+        if(greater_Level >= level.num)
+            activity.enableNextLvl(true);
         //Afficher le score
         activity.setScore(score);
     }

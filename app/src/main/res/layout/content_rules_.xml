@@ -19,28 +19,35 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="20dp"
             android:orientation="vertical">
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textSize="@dimen/my_font"
                 android:textStyle="bold"
                 android:text="@string/rules_content_title1" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textSize="@dimen/my_font"
                 android:text="@string/rules_content_1" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textSize="@dimen/my_font"
+                android:layout_marginBottom="5dp"
                 android:text="@string/rules_content_end" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
+                android:textSize="@dimen/my_font"
                 android:text="@string/rules_content_points_t" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textSize="@dimen/my_font"
                 android:text="@string/rules_content_points" />
 
 

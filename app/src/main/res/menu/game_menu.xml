@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/reinitialize"
+        android:icon="@drawable/reinit_ic"
+        android:title="@string/reinit"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/joker"
+        android:icon="@drawable/joker_ic"
+        android:title="@string/joker"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/exit"
+        android:icon="@drawable/exit_name"
+        android:title="@string/exit"
+        app:showAsAction="ifRoom"/>
+</menu>

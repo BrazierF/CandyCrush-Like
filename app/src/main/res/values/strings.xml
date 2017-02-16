@@ -15,6 +15,10 @@
     <string name="remaining_t">A effectuer : </string>
     <string name="coups_t">Coups restants : </string>
     <string name="blocked_level"> Niveau bloqué </string>
+    <string name="dialog_exit"> Voulez-vous quitter le jeu ? </string>
+    <string name="cancel">Annuler</string>
+    <string name="reinit">Recommencer</string>
+    <string name="joker"> Joker </string>
     <string name="rules_content_title1">
     Déroulement habituel d’une partie : </string>
     <string name="rules_content_1">

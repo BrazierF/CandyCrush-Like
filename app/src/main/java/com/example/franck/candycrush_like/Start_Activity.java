@@ -13,7 +13,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 /** Activité pour le choix du niveau*/
-public class Start_Activity extends AppCompatActivity {
+public class Start_Activity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

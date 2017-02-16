@@ -9,7 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 
-public class Rules_Activity extends AppCompatActivity {
+public class Rules_Activity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

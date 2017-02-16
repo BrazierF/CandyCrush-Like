@@ -24,6 +24,7 @@
                 android:text="@string/playlvl1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:textSize="@dimen/my_font"
                 android:id="@+id/playlvl1"
                 />
         </LinearLayout>
@@ -37,6 +38,7 @@
                 android:text="@string/playlvl2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:textSize="@dimen/my_font"
                 android:id="@+id/playlvl2" />
         </LinearLayout>
         <LinearLayout
@@ -48,6 +50,7 @@
                 android:text="@string/playlvl3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:textSize="@dimen/my_font"
                 android:id="@+id/playlvl3" />
         </LinearLayout>
 
@@ -61,6 +64,7 @@
                 android:text="@string/playlvl4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:textSize="@dimen/my_font"
                 android:id="@+id/playlvl4" />
         </LinearLayout>
 
