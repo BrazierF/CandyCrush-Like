@@ -12,6 +12,7 @@ import android.view.MenuItem;
 public class BaseActivity extends AppCompatActivity {
 
     @Override
+    /**  https://developer.android.com/training/appbar/actions.html */
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.exit:
@@ -25,6 +26,8 @@ public class BaseActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    /** Crée la boite de dialogue
+     *     -   https://developer.android.com/guide/topics/ui/dialogs.html */
     protected void confirm_exit(){
         AlertDialog.Builder builder1 = new AlertDialog.Builder(this);
         builder1.setMessage(R.string.dialog_exit);
@@ -58,6 +61,8 @@ public class BaseActivity extends AppCompatActivity {
         return true;
     }
 
+    /** Fermer l'application
+     *  http://stackoverflow.com/questions/3226495/how-to-exit-from-the-application-and-show-the-home-screen */
     public void exit() {
         Intent intent = new Intent(this, MainActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);

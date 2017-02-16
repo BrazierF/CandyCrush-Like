@@ -107,11 +107,7 @@ public class Circle extends TextView {
 
         }
         transparent(false);
-        //RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(10000, 10000);
-        //setLayoutParams(layoutParams);
-        /*setWidth(10);
-        setHeight(10);
-        setTextSize(10);*/
+        setText("");
     }
 
 

@@ -5,8 +5,8 @@
 /.idea/libraries
 .DS_Store
 /build
-/other/rapport.aux
-/other/rapport.log
-/other/rapport.synctex.gz
+/rapport/rapport.aux
+/rappor/rapport.log
+/rapport/rapport.synctex.gz
 /captures
 .externalNativeBuild

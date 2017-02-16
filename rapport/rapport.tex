@@ -108,28 +108,28 @@ Fabien  \textsc{BERQUEZ} % Supervisor's Name
 \end{titlepage}
 
 \section{Introduction}
-
-\section{Présentation technique}7
+Le but de de ce TP est de créer une application pour le jeu match-3. Nous avons voulu pour la phase de jeu proposer un modèle Modèle-Vue-Contrôleur ce qui nous semblait le plus approprié.
+\section{Présentation technique}
 \subsection{Activités}
-Notre applications possèdent deux types d'activités, des activités où ne sont présent que des boutons pour pouvoir accéder à l'activité de jeu et les activités de jeu et de règles qui sont les activités finales. Ces activités intermédiaires sont :
+Notre application possède deux types d'activités, des activités où ne sont présent que des boutons pour pouvoir accéder à l'activité de jeu et les activités de jeu et de règles qui sont les activités finales. Ces activités intermédiaires sont :
 \begin{itemize}
 \item Main Activity \\
 Cette activité est l'activité première de l'application et permet d'accéder à la page de choix des niveaux,  aux règles du jeu ou  le quitter
 \item StartActivity \\
 Cette activité permet d'effectuer le choix du niveau auquel l'utilisateur veut jouer, l'utilisateur est bloqué si le niveau précédent n'est pas réussi
 \end{itemize}
-Les activités finales sont : \\
+Les activités dites finales sont : 
 \begin{itemize}
 \item RulesActivity \\
 Cette activité comprend uniquement les règles du jeu (compris dans des \textit{TextViews}) sans autre intéraction avec l'utilisateur
 \item GameActivity \\
-L'activité la plus importante de l'application qui est la \textit{vue} du jeu, elle récupère la bonne  grille depuis un fichier xml grâce à un extra dans la création de l'activité et initialise le contrôleur de jeu
+L'activité la plus importante de l'application qui est la \textit{vue} du jeu, elle récupère la bonne  grille depuis un fichier xml grâce à un extra dans la création de l'activité et initialise le contrôleur de jeu.
 \end{itemize}
 Chaque classe hérite de la classe BaseActivity qui implémente les fonctions communes à chaque activité, par exemple celles appelées lorsque l'on appuie sur un bouton de la bar d'application située en haut de l'écran.
 
 
 \subsection{Classes}
-Notre application possède 5 classes essentiels pour le fonctionnement du jeu. il y a deux classes qui implémentent des Listeners. (\textit{OnTouch} et \textit{OnDrag}). L'\textit{OnTouchListener} permet de faire disparaître l'élement lorsque l'on appuie dessus et qu'on comment à le déplacer.   L'\textit{OnDragListener} a surtout pour but de détecter les éléments que l'utilisateur veut échanger et d'\textit{envoyer} cette requête au contrôleur. Les autres classes sont Circle, Level et LevelController.
+Notre application possède 5 classes essentielles pour le fonctionnement du jeu. il y a deux classes qui implémentent des Listeners. (\textit{OnTouch} et \textit{OnDrag}). L'\textit{OnTouchListener} permet de faire disparaître l'élement lorsque l'on appuie dessus et qu'on comment à le déplacer.   L'\textit{OnDragListener} a surtout pour but de détecter les éléments que l'utilisateur veut échanger et d'\textit{envoyer} cette requête au contrôleur. Les autres classes sont Circle, Level et LevelController.
 \subsubsection{Level}
 L'instance de cette classe contient tous les caractéristiques (nombre de lignes, colonnes, score à atteindre,...) d'un niveau de jeu.
 \subsubsection{LevelController}
@@ -149,8 +149,9 @@ Nous avons identifié quelques points faibles dans notre application. Voici la l
 \item Nous avons essayé après coup de créer un mode pour voir les différentes étapes dans un même coup ou échange.  
 \item Des artefacts peuvent apparaître dans le jeu (des alignements qui devraient disparaître) ou un élément qui reste dans son état \textit{à enlever} identifiable par sa transparence.
 \item Nous aurions aimer pouvoir créer des animations.
-\item Des textes plus plaisant à lire. Le but serait d'avoir un meilleur agencement des \textit{TextViews}
-\item Une amélioration serait de pouvoir créer des niveaux aléatoirement avec leur difficultés.  
+\item Des textes plus plaisant à lire. Le but serait d'avoir un meilleur agencement des \textit{TextViews}.
+\item Une amélioration serait de pouvoir créer des niveaux aléatoirement avec leur difficultés. 
+\item Nous avons utilisé nos propres smartphones pour les tests, nous avons seulement pu essayer d'obtenir un aperçu sur les plus grands appareil grâce à la fonctionnalité \textit{Preview} d' \textit{Android Studio} 
 \end{itemize}
 
 \section{Autres}
