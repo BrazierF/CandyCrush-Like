@@ -4,6 +4,6 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="me_size">31dp</dimen>
-    <dimen name="my_font">20sp</dimen>
-    <dimen name="score_size">150dp</dimen>
+    <dimen name="my_font">15sp</dimen>
+    <dimen name="score_size">170dp</dimen>
 </resources>

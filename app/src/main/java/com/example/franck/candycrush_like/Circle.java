@@ -106,7 +106,7 @@ public class Circle extends TextView {
                 color_s = "black";
 
         }
-
+        transparent(false);
         //RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(10000, 10000);
         //setLayoutParams(layoutParams);
         /*setWidth(10);
@@ -174,5 +174,13 @@ public class Circle extends TextView {
     /**Modifier la colonne de l'élément*/
     public void setPlacementY(int yi){
         y = yi;
+    }
+
+    /**Mettre la couleur en transparence*/
+    public void transparent(boolean trans){
+        if(trans)
+            getBackground().setAlpha(120);
+        else
+            getBackground().setAlpha(255);
     }
 }

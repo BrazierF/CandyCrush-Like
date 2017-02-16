@@ -129,11 +129,30 @@ Chaque classe hérite de la classe BaseActivity qui implémente les fonctions co
 
 
 \subsection{Classes}
-Notre application possède 5 classes, essentiel pour le fonctionnement du jeu. il y a deux classes qui implémentent des Listeners. (\textit{OnTouch} et \textit{OnDrag}). L'\textit{OnTouchListener} permet de faire disparaître l'élement lorsque l'on appuie dessus et qu'on comment à le déplacer.   L'\textit{OnDragListener} a surtout pour but de détecter les éléments que l'utilisateur veut échanger et d'\textit{envoyer} cette requête au contrôleur.
- 
+Notre application possède 5 classes essentiels pour le fonctionnement du jeu. il y a deux classes qui implémentent des Listeners. (\textit{OnTouch} et \textit{OnDrag}). L'\textit{OnTouchListener} permet de faire disparaître l'élement lorsque l'on appuie dessus et qu'on comment à le déplacer.   L'\textit{OnDragListener} a surtout pour but de détecter les éléments que l'utilisateur veut échanger et d'\textit{envoyer} cette requête au contrôleur. Les autres classes sont Circle, Level et LevelController.
+\subsubsection{Level}
+L'instance de cette classe contient tous les caractéristiques (nombre de lignes, colonnes, score à atteindre,...) d'un niveau de jeu.
+\subsubsection{LevelController}
+Certains de ses attributs sont statique pour pouvoir être accessible tout le long de l'exécution comme le niveau maximal débloqué.
+LevelController est responsable de la grille, de permettre un échange valide, de supprimer les éléments alignés et les remplacer.
 
+\subsubsection{Circle}
+\textit{Circle} est la représentation d'un élément, ses attributs sont donc son positionnement, sa couleur, nous avons aussi rajouté la position cible de l'élément (par exemple lors d'un échange orchestré par l'utilisateur, la position cible sera celle de l'autre élément, cette position peut ne pas être valable pour un échange) 
 \section{Difficultés particulières}
+Nous avons éprouvé des difficultés essentiellement pour le contrôleur, spécialement pour créer un état temporaire pour voir s'il y a des alignements et si possible annuler cet état et être dans le précédent sans laisser de trace de cet état. \\
+Nous avons perdu du temps pour pouvoir changer la taille des éléments, cependant nous avons trouvé une solution qui n'est pas optimale en mettant la taille dans des fichier xml en fonction de la taille de l'écran. Notre problème venait du fait que nos éléments héritait du boutons et qu'il était difficile de pouvoir modifier leur taille, nous avons donc fait hérité de \textit{TextView} nos éléments  
 
 \section{Critiques et suggestions}
+Nous avons identifié quelques points faibles dans notre application. Voici la liste : 
+\begin{itemize}
+\item Nous avons pas réussi à faire en sorte que la grille et les éléments s'épousent parfaitement avec la taille de l'écran
+\item Nous avons essayé après coup de créer un mode pour voir les différentes étapes dans un même coup ou échange.  
+\item Des artefacts peuvent apparaître dans le jeu (des alignements qui devraient disparaître) ou un élément qui reste dans son état \textit{à enlever} identifiable par sa transparence.
+\item Nous aurions aimer pouvoir créer des animations.
+\item Des textes plus plaisant à lire. Le but serait d'avoir un meilleur agencement des \textit{TextViews}
+\item Une amélioration serait de pouvoir créer des niveaux aléatoirement avec leur difficultés.  
+\end{itemize}
 
+\section{Autres}
+Pour résoudre nos différents problèmes ou manque de connaissances en Android nous avons consulté plusieurs sites, la liste \textbf{non-exhaustive} de ces sites sont présent dans le fichier \textit{src/doc/sources}. Ces sites ont inspiré notre code et des parties de celui-ci sont directement issues de ces sites.
 \end{document}

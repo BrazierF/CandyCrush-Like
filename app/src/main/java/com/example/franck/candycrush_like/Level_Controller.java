@@ -251,7 +251,6 @@ public  class Level_Controller {
         for(Circle one : moved_circles) {
             int row = one.getX_t();
             int column = one.getY_t();
-            //boolean horizontal = false;
             for (int i = max(column - 2, 0); i <= min(column, (level.nb_columns - 1) - 2); i++) {
                 if (one.getC() == config[i][row].getC() && one.getC() == config[i + 1][row].getC() && one.getC() == config[i + 2][row].getC()) {
                     print_move(config[i][row]);
@@ -261,11 +260,6 @@ public  class Level_Controller {
                 }
 
             }
-            /*if (horizontal) {
-                addToRemove(config[circles_to_remove.get(circles_to_remove.size() - 1).getPlacementY() + 1][circles_to_remove.get(circles_to_remove.size() - 1).getPlacementX()]);
-                addToRemove(config[circles_to_remove.get(circles_to_remove.size() - 2).getPlacementY() + 2][circles_to_remove.get(circles_to_remove.size() - 2).getPlacementX()]);
-            }*/
-            //boolean vertical = false;
             for (int i = max(row - 2, 0); i <= min(row, (level.nb_lines - 1) - 2); i++) {
                 if (one.getC() == config[column][i].getC() && one.getC() == config[column][i + 1].getC() && one.getC() == config[column][i + 2].getC()) {
                     print_move(config[column][i]);
@@ -274,17 +268,11 @@ public  class Level_Controller {
                         temp_score +=100;
                 }
             }
-            /*if (vertical) {
-                addToRemove(config[circles_to_remove.get(circles_to_remove.size() - 1).getPlacementY()][circles_to_remove.get(circles_to_remove.size() - 1).getPlacementX() + 1]);
-                addToRemove(config[circles_to_remove.get(circles_to_remove.size() - 2).getPlacementY()][circles_to_remove.get(circles_to_remove.size() - 2).getPlacementX() + 2]);
-            }*/
         }
         Log.w("Count", circles_to_remove.size()+" to remove");
         moved_circles.clear();
 
         blackCircles();
-
-       // removeCircle() ;
 
         //moved_circles.addAll(circles_to_remove);
         return (temp_score);
@@ -292,7 +280,7 @@ public  class Level_Controller {
 
     public  void blackCircles(){
         for (Circle c : circles_to_remove) {
-            c.getBackground().setAlpha(120);
+            c.transparent(true);
         }
     }
 
